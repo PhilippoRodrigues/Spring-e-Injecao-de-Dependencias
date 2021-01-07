@@ -1,11 +1,8 @@
-package com.algaworks.algafood.injecao.service;
-
-import org.springframework.stereotype.Component;
+ package com.algaworks.algafood.injecao.service;
 
 import com.algaworks.algafood.injecao.modelo.Cliente;
 import com.algaworks.algafood.injecao.notificacao.Notificador;
 
-@Component
 public class AtivacaoClienteService {
 	
 	private Notificador notificador;
