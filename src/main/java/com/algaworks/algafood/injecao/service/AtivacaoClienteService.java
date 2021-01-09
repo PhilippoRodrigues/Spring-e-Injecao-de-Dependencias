@@ -1,16 +1,17 @@
  package com.algaworks.algafood.injecao.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 import com.algaworks.algafood.injecao.modelo.Cliente;
+import com.algaworks.algafood.injecao.notificacao.NivelUrgencia;
 import com.algaworks.algafood.injecao.notificacao.Notificador;
+import com.algaworks.algafood.injecao.notificacao.TipoDoNotificador;
 
 @Component
 public class AtivacaoClienteService {
 	
-	@Qualifier("urgente")
+	@TipoDoNotificador(NivelUrgencia.NORMAL)
 	@Autowired
 	private Notificador notificador;
 	
