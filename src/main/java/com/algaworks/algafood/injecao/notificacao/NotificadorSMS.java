@@ -1,9 +1,11 @@
 package com.algaworks.algafood.injecao.notificacao;
 
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 import com.algaworks.algafood.injecao.modelo.Cliente;
 
+@Qualifier("urgente")
 @Component
 public class NotificadorSMS implements Notificador {
 
