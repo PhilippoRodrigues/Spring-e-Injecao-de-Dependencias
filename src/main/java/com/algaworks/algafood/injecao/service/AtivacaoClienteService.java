@@ -1,14 +1,13 @@
  package com.algaworks.algafood.injecao.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
 
 import com.algaworks.algafood.injecao.modelo.Cliente;
 import com.algaworks.algafood.injecao.notificacao.NivelUrgencia;
 import com.algaworks.algafood.injecao.notificacao.Notificador;
 import com.algaworks.algafood.injecao.notificacao.TipoDoNotificador;
 
-@Component
+//@Component
 public class AtivacaoClienteService {
 	
 	@TipoDoNotificador(NivelUrgencia.NORMAL)
@@ -19,6 +18,18 @@ public class AtivacaoClienteService {
 //	public AtivacaoClienteService(Notificador notificador) {
 //		this.notificador = notificador;
 //	}
+	
+	// Uma das formas de implementação de métodos callback
+	
+//	@PostConstruct
+	public void init() {
+		System.out.println("INIT");
+	}
+	
+//	@PreDestroy
+	public void destroy() {
+		System.out.println("DESTROY");
+	}
 
 	public void ativar(Cliente cliente) {
 		cliente.ativar();
